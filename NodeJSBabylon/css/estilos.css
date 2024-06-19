@@ -1,0 +1,362 @@
+
+
+/* Stats & Tap Info DIV */
+#stats-div {
+    z-index: 199;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    pointer-events: none;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+#pnael_inferior {
+    background-color: rgb(86, 87, 86);
+    z-index: 199;
+    position: fixed;
+    bottom: 15px;
+    left: 35%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    pointer-events: none;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea elementos al inicio del eje transversal */
+    text-align: left; /* Alinea el texto a la izquierda */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
+}
+
+#currenteFrame {
+    margin: 0; /* Asegura que no haya margen por defecto */
+    padding: 0 10px; /* Añade padding si es necesario */
+    color: #ff0000; /* Cambia el color del texto (rojo en este ejemplo) */
+    font-size: 12px; /* Cambia el tamaño del texto (18px en este ejemplo) */
+    font-weight: bold; /* Opcional: hace el texto en negrita */
+    font-family: Arial, sans-serif; /* Cambia la familia de fuentes */
+}
+#currenteFrame2 {
+    margin: 0; /* Asegura que no haya margen por defecto */
+    padding: 0 10px; /* Añade padding si es necesario */
+    color: #ff0000; /* Cambia el color del texto (rojo en este ejemplo) */
+    font-size: 12px; /* Cambia el tamaño del texto (18px en este ejemplo) */
+    font-weight: bold; /* Opcional: hace el texto en negrita */
+    font-family: Arial, sans-serif; /* Cambia la familia de fuentes */
+}
+
+
+/* FPS */
+#stats-text {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    font-size: small;
+    text-shadow: 0px 0px 4px #000000;
+}
+
+/* Badge Information */
+#badge {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    height: 22px;
+    transform: translateX(-50%);
+    padding: 5x;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-color: white;
+    font-size: small;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+/* Loader */
+#loadingDiv {
+    z-index: 200;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #8B0000; /* Old browsers */
+    background: -moz-linear-gradient(top, #8B0000 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8B0000 0%, #000000 100%); /* Chrome10-25, Safari5.1-6 */
+    background: linear-gradient(to bottom, #8B0000 0%, #000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8B0000', endColorstr='#000000', GradientType=0 ); /* IE6-9 */
+    
+}
+
+#loadingText {
+    position: absolute;
+    color: white;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: x-small;
+
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+    letter-spacing: 0.3rem;
+}
+
+.loader {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+  }
+.loader::after,
+.loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+}
+.loader::after {
+    animation-delay: 1s;
+}
+  
+@keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+}
+
+/*botones de inicio del juego*/
+@font-face {
+    font-family: 'Press Start 2p';
+  }
+  body {
+    background-color: black;
+    font-size: 30pt;
+    font-family: 'Press Start 2p';
+  }
+  .video-game-button {
+      text-shadow: 1px 1px pink, -1px -1px maroon;
+  
+      line-height: 1.5em;
+      text-align: center;
+      display: inline-block;
+      width: 1.5em;
+      -webkit-border-radius: .75em;
+      -moz-border-radius: .75em;
+      -o-border-radius: .75em;
+          border-radius: .75em;
+      background-color: red;
+      -webkit-box-shadow:  0 .2em maroon;
+      -moz-box-shadow:  0 .2em maroon;
+      -o-box-shadow:  0 .2em maroon;
+      box-shadow:  0 .2em maroon;
+      color: red;
+      margin: 5px;
+      background-color: red;
+      background-image: -o-linear-gradient(left top, rgb(104, 77, 82) 3%, red 22%, maroon 99%);
+      background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+      background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+      background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+      cursor: pointer;
+    padding-left: 5px;
+  }
+#opciones {
+    position: fixed;
+    left: 20px; /* Espacio con el borde izquierdo de la pantalla */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Asegura que esté por encima del canvas */
+}
+#menu {
+    display: flex;
+    top: 22%;
+    left: 20px; 
+    width: 200px; /* Ajusta el ancho del menú */
+    background-color: #625a5a; /* Color de fondo del menú */
+    padding: 10px;
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    position: fixed;
+    border-radius: 5%;
+    
+
+    .progress-container {
+    display: flex;
+    align-items: center;
+    }
+    .progress-container img {
+        margin-right: 13px; /* Espacio entre el icono y la barra de progreso */
+        width: 30px; /* Ajusta el tamaño del icono según sea necesario */
+        height: 30px; /* Ajusta el tamaño del icono según sea necesario */
+    }
+    .progress {
+        flex-grow: 1; /* Permite que la barra de progreso ocupe el espacio restante */
+    }
+    .info img{
+        width: 25px; /* Ajusta el tamaño del icono según sea necesario */
+        height: 25px;
+    }
+    
+}
+.start-btn {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+}
+.video-game-button:active, .start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+
+/*estilos de la carta que se muestra al encontrar la puerta*/
+
+#card-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+    display: block; /* Ocultar por defecto */
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+  
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+  
+.card {
+    background: #253476;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+}
+  
+.card:hover {
+color: rgb(88 199 250 / 100%);
+transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+animation: none;
+opacity: 0;
+}
+  
+  
+.card::before {
+content: "";
+width: 104%;
+height: 102%;
+border-radius: 8px;
+background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+  
+.card::after {
+position: absolute;
+content: "";
+top: calc(var(--card-height) / 6);
+left: 0;
+right: 0;
+z-index: -1;
+height: 100%;
+width: 100%;
+margin: 0 auto;
+transform: scale(0.8);
+filter: blur(calc(var(--card-height) / 6));
+background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+transition: opacity .5s;
+animation: spin 2.5s linear infinite;
+}
+  
+@keyframes spin {
+0% {
+    --rotate: 0deg;
+}
+100% {
+    --rotate: 360deg;
+}
+}
+
+a {
+color: #212534;
+text-decoration: none;
+font-family: sans-serif;
+font-weight: bold;
+margin-top: 2rem;
+}
+
+.btn{
+    color: rgb(88 199 250 / 0%);
+}

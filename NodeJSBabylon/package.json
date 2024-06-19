@@ -1,0 +1,27 @@
+{
+  "name": "nodejsbabylon",
+  "version": "1.0.0",
+  "description": "para babylon",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon .\\index.js",
+    "test": "node  index.js",
+    "build-css": "sass src/scss/beautyStyle.scss /css/beautyStyle.css",
+    "watch-css": "sass --watch src/scss/beautyStyle.scss:/css/beautyStyle.css"
+  },
+  "author": "raul",
+  "license": "ISC",
+  "dependencies": {
+    "@babylonjs/core": "^7.5.0",
+    "@babylonjs/havok": "^1.3.4",
+    "@babylonjs/loaders": "^7.5.0",
+    "ammo.js": "^0.0.10",
+    "babylonjs": "^7.4.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
